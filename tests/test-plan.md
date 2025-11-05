@@ -30,12 +30,14 @@
 
 - VS Code, Git, GitHub, Chrome, Jira, Jest 
 - Test Manager, Risk Analyst, Test Executor
+
 **Team Roles**
-| **Role**| **Name**| **Responsibilities**| **Deliverables**|
+| **Role** | **Name** | **Responsibilities** | **Deliverables** |
 |-------|------------------|-----------------|--------|
 | Test Manager| MERCY CHEBET| Plan, coordinate, finalize report| Updated Test Plan, daily status reports, final Test Summary|
 | Risk Analyst| EMILY AWUOR| Identify, log & monitor risks| Risk register, impact analysis, mitigation recommendations|
 | Test Executor| HORACE WITABA| Run tests & report bugs| Test execution evidence (screenshots, logs), defect tickets, test case status updates.|
+
 
 ### Environments
 - Development: localhost:3000 
