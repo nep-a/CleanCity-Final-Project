@@ -15,3 +15,8 @@
 | BUG-003       | Community posts not sorted chronologically    | Community Feed    | Minor        | Open       | Steps: Create new post → Appears below older ones.                                                  |
 | BUG-004       | “Mark as Scheduled” button doesn’t refresh UI | Admin Panel       | Major        | Open       | Steps: Click Mark as Scheduled → Status changes, but UI doesn’t update.                             |
 
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
