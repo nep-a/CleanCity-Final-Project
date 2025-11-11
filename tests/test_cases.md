@@ -4,11 +4,14 @@
 ### TEAM : 3 MEMBERS
 
 #### TEST CASE 1: NON - FUNCTIONAL TESTING.
-| TC ID | Test Description | Test Steps | Expected Result | Status |Priority|Environment|Risk percentage|
-| :--- | :--- | :--- | :--- | :--- | :---| :---|:---
-| TC_1-001 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
-| TC_1-002 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
-| TC_1-003 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
+| **Test Case ID** | **Area**       | **Scenario**                                    | **Expected Result**                             | **Tool / Method**    |
+| ---------------- | -------------- | ----------------------------------------------- | ----------------------------------------------- | -------------------- |
+| TC-NF-001        | Performance    | Page loads under 3 seconds                      | Pages load smoothly                             | Chrome DevTools      |
+| TC-NF-002        | Responsiveness | Layout adapts to mobile, tablet, and desktop    | No overflow or cut content                      | Browser resizing     |
+| TC-NF-003        | Accessibility  | Verify contrast, alt text, focus indicators     | Screen reader and WCAG 2.1 guidelines satisfied | WAVE or Lighthouse   |
+| TC-NF-004        | Security       | Verify no sensitive data stored in localStorage | Credentials removed after logout                | Manual + Code review |
+| TC-NF-005        | Usability      | Navigation and labeling are intuitive           | All buttons clearly labeled                     | Manual testing       |
+
 
 #### TEST CASE 2: Admin Functionality Test
 | **Test Case ID** | **Feature**            | **Test Scenario / Description**                                  | **Test Steps**                                                                                  | **Expected Result**                                  | **Priority** | **Status** |
@@ -47,8 +50,10 @@
 | TC_CM_07 | Community Feed     | Verify users can create posts                        | User logged in       | 1. Go to Community Feed 2. Create post                                         | Post appears in feed                        | High     | Draft  |
 | TC_CM_08 | Community Feed     | Verify likes/comments work                           | Post exists          | 1. Like and comment 2. Refresh                                                 | Likes/comments persist                      | High     | Draft  |
 | TC_CM_09 | Community Feed     | Verify feed shows latest posts first                 | Multiple posts exist | Reload page                                                                    | Posts appear in reverse chronological order | Medium   | Draft  |
-| TC_CM_10 | Media Upload       | Verify user can upload images/videos                 | Post creation page   | 1. Upload media 2. Save                                                        | Upload successful and preview visible       | Medium   | Draft  |
-| TC_CM_11 | Content Visibility | Verify only published content visible to public      | Admin logged in      | 1. Create draft post 2. View as user                                           | Draft not visible                           | High     | Draft  |
+| TC_CM_10 | Community Feed     |Verify users can share tips and experiences via posts.                 | User logged in | 1. Create post with tip/experience.
+2. Submit post.                                                         | Post is displayed under community section with visible content. | Medium   | Draft  |
+| TC_CM_11 | Media Upload       | Verify user can upload images/videos                 | Post creation page   | 1. Upload media 2. Save                                                        | Upload successful and preview visible       | Medium   | Draft  |
+| TC_CM_12 | Content Visibility | Verify only published content visible to public      | Admin logged in      | 1. Create draft post 2. View as user                                           | Draft not visible                           | High     | Draft  |
 
 
 #### TEST CASE 5: Dasboard and Analytics
