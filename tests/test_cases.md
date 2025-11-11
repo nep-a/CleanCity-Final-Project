@@ -40,13 +40,6 @@
 | TC_CM_10 | Media Upload       | Verify user can upload images/videos                 | Post creation page   | 1. Upload media 2. Save                                                        | Upload successful and preview visible       | Medium   | Draft  |
 | TC_CM_11 | Content Visibility | Verify only published content visible to public      | Admin logged in      | 1. Create draft post 2. View as user                                           | Draft not visible                           | High     | Draft  |
 
-=======
-| TC ID | Test Description | Test Steps | Expected Result | Status |Environment|
-| :--- | :--- | :--- | :--- | :--- | :---|
-| TC_4-001 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
-| TC_4-002 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
-| TC_4-003 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
->>>>>>> 780acb030d880a2a4f643892f38b496d1a55df61
 
 #### TEST CASE 5: Dasboard and Analytics
 | TC ID | Test Description | Test Steps | Expected Result | Status |Priority|Environment|Risk percentage|
