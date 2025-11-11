@@ -11,11 +11,21 @@
 | TC_1-003 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
 
 #### TEST CASE 2: Admin Functionality Test
-| TC ID | Test Description | Test Steps | Expected Result | Status |Priority|Environment|Risk percentage|
-| :--- | :--- | :--- | :--- | :--- | :---| :---|:---
-| TC_2-001 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
-| TC_2-002 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
-| TC_2-003 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
+| **Test Case ID** | **Feature**            | **Test Scenario / Description**                                  | **Test Steps**                                                                                  | **Expected Result**                                  | **Priority** | **Status** |
+| ---------------- | ---------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------ | ---------- |
+| TC-REQ-001       | View All Requests      | Verify that all submitted pickup requests appear in Admin panel. | 1. Login as admin.<br>2. Go to Admin Page.<br>3. Observe “All Requests” table.                  | All submitted requests display with correct columns. | High         | Passed     |
+| TC-REQ-002       | Approve/Reject/Modify  | Verify that admin can update request status.                     | 1. Select request from dropdown.<br>2. Choose status.<br>3. Click “Update Status.”              | Request status updates in table and dashboard.       | High         | Passed     |
+| TC-REQ-003       | Assign Dates/Times     | Verify that request modification includes scheduling.            | 1. Select request.<br>2. Change status to “Scheduled.”<br>3. Confirm date/time field populated. | Assigned schedule visible to user dashboard.         | Medium       | Pending    |
+| TC-REQ-004       | Filter/Search Requests | Verify that admin can filter requests by status or location.     | 1. Use filter dropdowns.<br>2. Select “Completed” or “Nairobi.”                                 | Table filters correctly to matching requests.        | High         | Passed     |
+| TC-USR-001       | View All Users   | Verify that admin can see all registered users.   | 1. Login as admin.<br>2. Open Admin page.<br>3. Navigate to User Management (future). | User table displays all user data.            | Medium       | Future     |
+| TC-USR-002       | Change Roles     | Verify admin can promote user to admin role.      | 1. Select user.<br>2. Change role.<br>3. Save changes.                                | User sees new access on login.                | High         | Future     |
+| TC-USR-003       | Suspend/Delete   | Verify admin can disable or delete user accounts. | 1. Select user.<br>2. Click Suspend/Delete.<br>3. Confirm action.                     | User cannot log in after deletion/suspension. | High         | Future     |
+| TC-USR-004       | Activity Reports | Verify admin can generate user activity report.   | 1. Click “Generate Report.”                                                           | System exports or displays usage summary.     | Low          | Future     |
+| TC-MOD-001       | Moderate Posts             | Verify admin can hide or delete community content. | 1. Login as admin.<br>2. Navigate to moderation panel.<br>3. Click “Delete” on post. | Post is removed from all user views.             | Medium       | Future     |
+| TC-MOD-002       | Flag Inappropriate Content | Verify users can report posts.                     | 1. Click “Flag” on post.<br>2. Submit report.                                        | Admin receives flagged post in moderation queue. | Medium       | Future     |
+| TC-MOD-003       | Announcements              | Verify admin can create announcements.             | 1. Navigate to Admin panel.<br>2. Click “Create Announcement.”<br>3. Save message.   | Announcement visible on dashboard or homepage.   | Medium       | Future     |
+
+
 
 #### TEST CASE 3: Community Features
 | TC ID | Test Description | Test Steps | Expected Result | Status |Priority|Environment|Risk percentage|
