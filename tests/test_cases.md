@@ -25,8 +25,8 @@
 | TC_3-003 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
 
 #### TEST CASE 4: Content management Testing
-| TC ID | Test Description | Test Steps | Expected Result | Status |Priority|Environment|Risk percentage|
-| :--- | :--- | :--- | :--- | :--- | :---| :---|:---
+| TC ID | Test Description | Test Steps | Expected Result | Status |Environment|
+| :--- | :--- | :--- | :--- | :--- | :---|
 | TC_4-001 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
 | TC_4-002 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
 | TC_4-003 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
