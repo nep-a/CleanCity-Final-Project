@@ -25,11 +25,28 @@
 | TC_3-003 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
 
 #### TEST CASE 4: Content management Testing
+
+| TC ID    | Feature            | Test Case Description                                | Precondition         | Steps                                                                          | Expected Result                             | Priority | Status |
+| -------- | ------------------ | ---------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------ | ------------------------------------------- | -------- | ------ |
+| TC_CM_01 | Blog System        | Verify admin can create, edit, and delete blog posts | Admin logged in      | 1. Go to Blog Admin 2. Click “Create Post” 3. Add title, content, tags 4. Save | Post is created and visible in list         | High     | Draft  |
+| TC_CM_02 | Blog System        | Verify users can view and interact (like/comment)    | User logged in       | 1. Open blog 2. Like a post 3. Comment                                         | Like and comment appear immediately         | High     | Draft  |
+| TC_CM_03 | Blog System        | Verify blog categories/tags filter correctly         | Blog posts exist     | 1. Select “Recycling” tag                                                      | Shows only related posts                    | Medium   | Draft  |
+| TC_CM_04 | Awareness Section  | Verify eco tips rotate every 5 seconds               | Page loaded          | Wait for 15 seconds                                                            | 3 different eco tips display sequentially   | Medium   | Draft  |
+| TC_CM_05 | Awareness Section  | Verify quizzes load and submit                       | Quiz page accessible | 1. Start quiz 2. Answer all questions 3. Submit                                | Shows score and explanations                | High     | Draft  |
+| TC_CM_06 | Awareness Section  | Verify infographics display correctly                | Page loaded          | 1. Scroll down 2. Observe graphics                                             | Infographics visible with correct data      | Medium   | Draft  |
+| TC_CM_07 | Community Feed     | Verify users can create posts                        | User logged in       | 1. Go to Community Feed 2. Create post                                         | Post appears in feed                        | High     | Draft  |
+| TC_CM_08 | Community Feed     | Verify likes/comments work                           | Post exists          | 1. Like and comment 2. Refresh                                                 | Likes/comments persist                      | High     | Draft  |
+| TC_CM_09 | Community Feed     | Verify feed shows latest posts first                 | Multiple posts exist | Reload page                                                                    | Posts appear in reverse chronological order | Medium   | Draft  |
+| TC_CM_10 | Media Upload       | Verify user can upload images/videos                 | Post creation page   | 1. Upload media 2. Save                                                        | Upload successful and preview visible       | Medium   | Draft  |
+| TC_CM_11 | Content Visibility | Verify only published content visible to public      | Admin logged in      | 1. Create draft post 2. View as user                                           | Draft not visible                           | High     | Draft  |
+
+=======
 | TC ID | Test Description | Test Steps | Expected Result | Status |Environment|
 | :--- | :--- | :--- | :--- | :--- | :---|
 | TC_4-001 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
 | TC_4-002 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
 | TC_4-003 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
+>>>>>>> 780acb030d880a2a4f643892f38b496d1a55df61
 
 #### TEST CASE 5: Dasboard and Analytics
 | TC ID | Test Description | Test Steps | Expected Result | Status |Priority|Environment|Risk percentage|
