@@ -56,13 +56,27 @@
 | TC_CM_12 | Content Visibility | Verify only published content visible to public      | Admin logged in      | 1. Create draft post 2. View as user                                           | Draft not visible                           | High     | Draft  |
 
 
-#### TEST CASE 5: Dasboard and Analytics
-| TC ID | Test Description | Test Steps | Expected Result | Status |Priority|Environment|Risk percentage|
-| :--- | :--- | :--- | :--- | :--- | :---| :---|:---
-| TC_5-001 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
-| TC_5-002 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
-| TC_5-003 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
-
+| TC ID | Test Description (Summary) | Priority | Risk |
+| :--- | :--- | :--- | :--- |
+| **Data Accuracy** | | | |
+| `TC-CC-039` | Verify "New Reports Today" KPI widget shows correct count | **High** | **High** |
+| `TC-CC-040` | Verify "Reports by Status" pie chart shows correct data segmentation | **High** | **High** |
+| `TC-CC-045` | Verify "Reports by Type" bar chart shows correct data segmentation | **High** | **High** |
+| `TC-CC-046` | Verify "Total Reports" KPI widget shows the correct all-time count | **High** | Medium |
+| `TC-CC-044` | [E2E] Verify dashboard accuracy, refresh, and filtering in one flow | **High** | **High** |
+| **Interactivity & Filtering** | | | |
+| `TC-CC-041` | Verify "Date Range" filter correctly updates all dashboard widgets | **High** | Medium |
+| `TC-CC-047` | Verify "Waste Type" filter (if any) correctly updates all charts | Medium | Medium |
+| `TC-CC-048` | Verify "Location/Area" filter (if any) correctly updates all charts | Medium | Medium |
+| `TC-CC-049` | Verify clicking on a chart segment (e.g., "New" slice) filters the report list | Medium | Low |
+| **Dynamic Refresh & State** | | | |
+| `TC-CC-007` | Verify dashboard data refreshes after a new report is submitted (on page reload) | **High** | Medium |
+| `TC-CC-043` | Verify dashboard displays a "No Data" message when no reports exist (Empty State) | Low | Low |
+| `TC-CC-050` | Verify widgets show "0" and not an error when data exists but is zero for the filter | Low | Low |
+| **Usability & Performance** | | | |
+| `TC-CC-051` | Verify dashboard links (e.g., "View All Reports") navigate to the correct page | Medium | Low |
+| `TC-CC-052` | Verify dashboard widgets are responsive and display correctly on mobile screens | Medium | Low |
+| `TC-CC-053` | Verify dashboard page load time is under 3 seconds (with 1,000+ reports) | Medium | Medium |
 #### TEST CASE 6: WASTE MANAGEMENT
 | TC ID | Test Description | Test Steps | Expected Result | Status |Priority|Environment|Risk percentage|
 | :--- | :--- | :--- | :--- | :--- | :---| :---|:---
