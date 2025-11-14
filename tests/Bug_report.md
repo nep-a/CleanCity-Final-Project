@@ -31,7 +31,7 @@ This document lists defects identified during manual functional testing of the C
 | D006 | Accessibility | Missing alt text for some images | Low | Inspect using DevTools | All images should have alt | Missing on few | Open |
 | D007 | Login | Error messages overlap on invalid login | Low | Enter invalid password | Error message displays clearly | Text overlaps button | Fixed |
 | D008 | Event Registration | Form does not validate empty fields | Medium | Click Join Event with empty fields | Should prompt user | Submits blank form | Open |
-
+|D009|Post editing|ther is no post editing|Low|No editing , after posting|should allow user to edit post|No editing option|open
 ---
 
 ### Summary
@@ -42,10 +42,9 @@ This document lists defects identified during manual functional testing of the C
 - Recommended improvements: Implement missing modules, improve UI responsiveness, add accessibility review.
 
 
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
-![alt text](image-6.png)
-![alt text](image-7.png)
-
+![alt text](../assets/image-3.png)
+![alt text](../assets/image-4.png)
+![alt text](../assets/image-5.png)
+![alt text](../assets/image-6.png)
+![alt text](../assets/image-7.png)
 https://mibeichebet13.atlassian.net/browse/CQT-42
