@@ -18,7 +18,8 @@ This document lists defects identified during manual functional testing of the C
 | BUG-001       | Missing validation for “Date” field           | Waste Management  | Major        | Open       | Steps: Leave Date blank → Submit form → No error shown. Expected: Validation error “Date required.” |
 | BUG-002       | Missing alt-text on Awareness infographics    | Awareness Section | Medium       | Open       | Steps: Use screen reader → Alt text missing on images.                                              |
 | BUG-003       | Community posts not sorted chronologically    | Community Feed    | Minor        | Open       | Steps: Create new post → Appears below older ones.                                                  |
-| BUG-004       | “Mark as Scheduled” button doesn’t refresh UI | Admin Panel       | Major        | Open       | Steps: Click Mark as Scheduled → Status changes, but UI doesn’t update.                             |
+| BUG-004       | “Mark as Scheduled” button doesn’t refresh UI | Admin Panel       | Major        | Open       | Steps: Click Mark as Scheduled → Status changes, but UI doesn’t update. 
+BUG -                          |
 
 
 | Defect ID | Module | Description | Severity | Steps to Reproduce | Expected Result | Actual Result | Status |
@@ -31,7 +32,7 @@ This document lists defects identified during manual functional testing of the C
 | D006 | Accessibility | Missing alt text for some images | Low | Inspect using DevTools | All images should have alt | Missing on few | Open |
 | D007 | Login | Error messages overlap on invalid login | Low | Enter invalid password | Error message displays clearly | Text overlaps button | Fixed |
 | D008 | Event Registration | Form does not validate empty fields | Medium | Click Join Event with empty fields | Should prompt user | Submits blank form | Open |
-
+|D009|Post editing|ther is no post editing|Low|No editing , after posting|should allow user to edit post|No editing option|open
 ---
 
 ### Summary
@@ -42,10 +43,9 @@ This document lists defects identified during manual functional testing of the C
 - Recommended improvements: Implement missing modules, improve UI responsiveness, add accessibility review.
 
 
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
-![alt text](image-6.png)
-![alt text](image-7.png)
-
+![alt text](../assets/image-3.png)
+![alt text](../assets/image-4.png)
+![alt text](../assets/image-5.png)
+![alt text](../assets/image-6.png)
+![alt text](../assets/image-7.png)
 https://mibeichebet13.atlassian.net/browse/CQT-42

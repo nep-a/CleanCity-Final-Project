@@ -31,11 +31,15 @@
 
 
 #### TEST CASE 3: Community Features
-| TC ID | Test Description | Test Steps | Expected Result | Status |Priority|Environment|Risk percentage|
-| :--- | :--- | :--- | :--- | :--- | :---| :---|:---
-| TC_3-001 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
-| TC_3-002 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
-| TC_3-003 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |
+-------------------- | :-------------- |
+| TC_3-001|logged-in user can create a community post successfully | 1. Log in with valid credentials.2. click Community page.3. Clickcreate post.4. Enter a valid title and content.<br>5. Click Submit. | Post should appear immediately in the community   | Pass | High     |  Chrome | 70%  |
+|TC_3-002|  comment on community posts   | 1. Log in 2. Open an existing post.3. Type a comment and  Submit | comment appears instantly under the post with correct user info. |pass | high  |  Chrome | 10%             |
+|TC_3-003 |  non-logged-in users cannot comment on posts| 1. Log out of the app.2. click Community page.3. Attempt to  comment. | The system should prevent posting |fail| High |  Chrome | 20%             |
+|TC_3-004 | can delete their own post  | 1. Log in. 2. Go to your post.3. Click Delete . | Post is removed from feed and no longer visible to others.| Fail | High   |  Chrome| 25%             |
+| TC_3-005 | cannot submit an empty post  | 1. Log in.<br>2. Click Post.<br>3. Leave the fields blank and click Submit  |display an error message like Post content cannot be empty. |fail | Medium   |  Chrome| 10%             |
+|TC_3-006 | image uploads   does not function correctly       | 1. Log in.2. Create a post with an image file PNG.3  Submit.| Image does not upload successfully and display in the post preview. |Fail | Medium  Chrome| 15%             |
+|TC_3-007 special characters render correctly in posts	1. Log in.2. Create a post with special characters  and emoji.3. Submit and view.	Emojis and symbols display correctly without layout issues.	|Pass|	Low	| Chrome	5%
+|TC_3-008 | Editing of post   | 1. Log in.2. Go to your existing post.<br>3. Click edit Post, modify the text, and save. | Changes should be reflected immediately with updated.  | fail | High     |  Chrome| 15%             |
 
 #### TEST CASE 4: Content management Testing
 
@@ -77,11 +81,15 @@
 | `TC-CC-052` | Verify dashboard widgets are responsive and display correctly on mobile screens | Medium | Low |
 | `TC-CC-053` | Verify dashboard page load time is under 3 seconds (with 1,000+ reports) | Medium | Medium |
 #### TEST CASE 6: WASTE MANAGEMENT
-| TC ID | Test Description | Test Steps | Expected Result | Status |Priority|Environment|Risk percentage|
-| :--- | :--- | :--- | :--- | :--- | :---| :---|:---
-| TC_6-001 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail |Environment|
-| TC_6-002 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail | Environment|
-| TC_6-003 | [Test objective] | 1. [Step 1]<br>2. [Step 2]<br>3. [Step 3] | [Expected behavior] | Pass/Fail | Environment|
+| TC ID | Test Description | Test Steps | Expected Result | Status |Priority|Environment|Risk percentage
+| TC_6-001 | user can schedule a waste pickup successfully | 1. login.2. click Schedule Pickup section.<br>3. Enter required details location, type of waste.4. Click Submit Request. | Pickup request is submitted successfully and a confirmation message is displayed. | Pass | High     | chrome | 30%   |
+|TC_6-002 |system validates empty fields  | 1.login  Schedule Pickup page.<br>2. Leave all mandatory fields empty.3. Click Submit.| error messages appear indicating required fields. | Pass | Medium  |chrome  | 20%   |
+|TC_6-003 | Verify that a user can view their scheduled pickups   | 1. Log in 2. Navigate to My Pickups .<br>3. Check the displayed list.  | User sees accurate list of scheduled or completed pickups. | Fail |Low  |chrome | 10%   |
+| TC_6-004 |  special characters in waste description  | 1. Go to Schedule Pickup.2. Enter special characters in description 3. Submit the request.| System accepts   | Pass | Medium   |chrome    | 15% |
+|TC_6-005| location works properly | 1. go to Schedule Pickup.2. Click on location .3. Select a valid location. | Selected location is captured and displayed correctly in the form.  |pass | High |chrome     | 25%  |
+TC_6-006| duplicate waste reports for same location	1. Log in.2. Submit a waste report for a specific location.3. Try submitting another report for the same location immediately.	System should prompt A report already exists for this location.|Fail	|High	|Chrome	20%
+TC_6-007|notifications when waste status changes	1. Log in as admin and update a report’s status.2. Log in as the reporting user.3. Check Notifications.	User receives a notification indicating the change in waste report status.|Fail	|Medium	|Chrome	15%
+
 
 #### TEST CASE 7: Authentication
 | TC ID | Test Description | Test Steps | Expected Result | Status |Priority|Environment|Risk percentage|
