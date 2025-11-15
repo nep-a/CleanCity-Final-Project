@@ -32,7 +32,8 @@ BUG -                          |
 | D006 | Accessibility | Missing alt text for some images | Low | Inspect using DevTools | All images should have alt | Missing on few | Open |
 | D007 | Login | Error messages overlap on invalid login | Low | Enter invalid password | Error message displays clearly | Text overlaps button | Fixed |
 | D008 | Event Registration | Form does not validate empty fields | Medium | Click Join Event with empty fields | Should prompt user | Submits blank form | Open |
-|D009|Post editing|ther is no post editing|Low|No editing , after posting|should allow user to edit post|No editing option|open
+|D009|Post editing|there is no post editing|Low|No editing , after posting|should allow user to edit post|No editing option|open
+|D0010| Admin functionality| Pickup requests do not load| High|Log in as Admin, go to "Pickup Requests". Observe page content.|All pickup requests display in a list with full details.|The page loads but shows an empty list even though requests exist in the database.|open
 ---
 
 ### Summary
@@ -48,4 +49,7 @@ BUG -                          |
 ![alt text](../assets/image-5.png)
 ![alt text](../assets/image-6.png)
 ![alt text](../assets/image-7.png)
+"C:\Users\user\Desktop\SPECIALIZATION ASSIGNMENT\wk-6-nep-a-1\assets\Sonarqube bug 1.png"
+"C:\Users\user\Desktop\SPECIALIZATION ASSIGNMENT\wk-6-nep-a-1\assets\Sonarqube 2 Alt image .png"
+"C:\Users\user\Desktop\SPECIALIZATION ASSIGNMENT\wk-6-nep-a-1\assets\Sonarqube 3 Alt images.png"
 https://mibeichebet13.atlassian.net/browse/CQT-42
