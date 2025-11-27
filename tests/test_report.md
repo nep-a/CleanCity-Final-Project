@@ -74,14 +74,14 @@ We need to verify all functional requirements (submit requests, view requests, f
 
 ## Entry & Exit Criteria
 ## Entry Criteria:
-•	Application starts successfully.
-•	Test data seeded / sample requests present (REQ001–REQ005).
-•	Test environment (browsers) available.
-•	Test plan approved.
+-	Application starts successfully.
+-	Test data seeded / sample requests present (REQ001–REQ005).
+-	Test environment (browsers) available.
+-	Test plan approved.
 ## Exit Criteria:
-•	All P0 and P1 test cases executed and passed OR have approved mitigations / accepted risks.
-•	All P0 defects fixed and re-tested.
-•	Test summary report completed and signed off by Test Manager.
+-	All P0 and P1 test cases executed and passed OR have approved mitigations / accepted risks.
+-	All P0 defects fixed and re-tested.
+-	Test summary report completed and signed off by Test Manager.
 
 ---
 
@@ -115,14 +115,14 @@ Cross-browser layout differences	Low–Medium	Medium	Test in target browsers; ad
 
 ## Test Data
 Sample Requests (seeded):
-•	REQ001 — John Doe — Nairobi — General — Preferred: 2025-11-06 — Status: Pending
-•	REQ002 — Jane Smith — Kisumu — Recyclable — Status: Scheduled
-•	REQ003 — Mike Johnson — Mombasa — Hazardous — Status: Completed
-•	REQ004 — Sarah Wilson — Eldoret — General — Status: Missed
-•	REQ005 — David Brown — Nairobi — Recyclable — Status: Pending
+-	REQ001 — John Doe — Nairobi — General — Preferred: 2025-11-06 — Status: Pending
+-	REQ002 — Jane Smith — Kisumu — Recyclable — Status: Scheduled
+-	REQ003 — Mike Johnson — Mombasa — Hazardous — Status: Completed
+-	REQ004 — Sarah Wilson — Eldoret — General — Status: Missed
+-	REQ005 — David Brown — Nairobi — Recyclable — Status: Pending
 User accounts (demo):
-•	Regular user: user@cleancity.com / password123
-•	Admin user: admin@cleancity.com / admin123
+-	Regular user: user@cleancity.com / password123
+-	Admin user: admin@cleancity.com / admin123
 
 ---
 
@@ -142,85 +142,86 @@ Boundary test (long inputs)	TC-070
 ## Test Cases (Key / Required)
 Below are sample test cases. Status column is to be filled after execution.
 TC-001 — Submit valid pickup request (positive)
-•	Feature: Request Waste Pickup (Home)
-•	Precondition: App open at Home page; logged-in as user (or guest if allowed)
-•	Steps:
+-	Feature: Request Waste Pickup (Home)
+-	Precondition: App open at Home page; logged-in as user (or guest if allowed)
+-	Steps:
 1.	Navigate to Home → Request Waste Pickup form.
 2.	Fill "Full Name" = "Alice Tester".
 3.	Select Location = "Nairobi".
 4.	Select Waste Type = "Recyclable".
 5.	Optional: choose preferredDate = (tomorrow).
 6.	Click Submit Request.
-•	Expected Result: Success message displayed (success-message) and new request added to Dashboard with a new Request ID (REQxxx). localStorage updated with the request.
-•	Priority: P0
-•	Status: (Pass/Fail)
+-	Expected Result: Success message displayed (success-message) and new request added to Dashboard with a new Request ID (REQxxx). localStorage updated with the request.
+-	Priority: P0
+-	Status: (Pass/Fail)
 TC-002 — Submit with missing required fields (negative)
-•	Feature: Form Validation
-•	Steps:
+-	Feature: Form Validation
+-	Steps:
 1.	Leave "Full Name" empty.
 2.	Click Submit Request.
-•	Expected Result: Validation error displayed in name-error element; request is not accepted. (Note known bug: date field may not show validation.)
-•	Priority: P0
+-	Expected Result: Validation error displayed in name-error element; request is not accepted. (Note known bug: date field may not show validation.)
+-	Priority: P0
 TC-003 — Date validation bug check (intentional)
-•	Feature: Date validation
-•	Steps:
+-	Feature: Date validation
+-	Steps:
 1.	In form, leave other required fields valid but input invalid past date or empty date if the requirement expects a date — exercise the known bug.
-•	Expected Result: According to spec, date is optional, but known bug: "date field doesn't show validation error" — log behavior as observed.
-•	Priority: P1
+-	Expected Result: According to spec, date is optional, but known bug: "date field doesn't show validation error" — log behavior as observed.
+-	Priority: P1
 TC-010 — Filter by location (Eldoret)
-•	Feature: Dashboard filtering
-•	Steps:
+-	Feature: Dashboard filtering
+-	Steps:
 1.	Go to Dashboard.
 2.	Set locationFilter to "Eldoret".
-•	Expected Result: Only requests with Location = Eldoret are displayed. (Known bug: currently shows Nairobi; log if reproduced.)
-•	Priority: P0
+-	Expected Result: Only requests with Location = Eldoret are displayed. (Known bug: currently shows Nairobi; log if reproduced.)
+-	Priority: P0
 TC-020 — Awareness images accessibility
-•	Feature: Awareness page images
-•	Steps:
+-	Feature: Awareness page images
+-	Steps:
 1.	Open Awareness page.
 2.	Inspect images for alt attribute.
 3.	Use a screen reader or Lighthouse to check image accessibility.
-•	Expected Result: Each image has an appropriate alt attribute. (Known bug: Missing alt-text on images.)
-•	Priority: P1
+-	Expected Result: Each image has an appropriate alt attribute. (Known bug: Missing alt-text on images.)
+-	Priority: P1
 TC-030 — Feedback: invalid Request ID
-•	Feature: Feedback form
-•	Steps:
+-	Feature: Feedback form
+-	Steps:
 1.	Enter requestId = "REQ999" (non-existent).
 2.	Select reason and submit.
-•	Expected Result: Validation error requestId-error shown indicating invalid request ID.
-•	Priority: P1
+-	Expected Result: Validation error requestId-error shown indicating invalid request ID.
+-	Priority: P1
 TC-040 — Admin: mark as Scheduled and UI update
-•	Feature: Admin status updates
-•	Steps:
+-	Feature: Admin status updates
+-	Steps:
 1.	Login as admin.
 2.	Navigate to Admin → select REQ001 → choose "Scheduled" → click Update.
-•	Expected Result: Request status updates in admin table and dashboard; localStorage updated; UI refreshes immediately. (Known bug: UI doesn't refresh.)
-•	Priority: P0
+-	Expected Result: Request status updates in admin table and dashboard; localStorage updated; UI refreshes immediately. (Known bug: UI doesn't refresh.)
+-	Priority: P0
 TC-050 — LocalStorage persistence
-•	Feature: Data persistence
-•	Steps:
+-	Feature: Data persistence
+-	Steps:
 1.	Submit a request.
 2.	Open devtools → Application → localStorage → verify new entry.
 3.	Reload page and check request still listed.
-•	Expected Result: data persisted across reloads.
-•	Priority: P1
+-	Expected Result: data persisted across reloads.
+-	Priority: P1
 TC-070 — Boundary testing: very long input
-•	Feature: Boundary testing
-•	Steps:
+-	Feature: Boundary testing
+-	Steps:
 1.	In Full Name, enter 5,000 characters.
 2.	Submit the form.
-•	Expected Result: Application handles gracefully — truncated or rejected with a validation message; layout not broken. If layout breaks, record as bug.
-•	Priority: P2
+-	Expected Result: Application handles gracefully — truncated or rejected with a validation message; layout not broken. If layout breaks, record as bug.
+-	Priority: P2
 
 ---
 
 ## Automated Tests
 Recommended automated tests to implement with React Testing Library:
-•	Render pickup form and assert required fields and error messages (TC-001, TC-002).
-•	Simulate filter controls on dashboard and assert filtered output (TC-010).
-•	Test admin status update function updates storage and returns expected data (TC-040).
-•	Snapshot tests for major components (home, dashboard, admin) to catch UI regressions.
+-	Render pickup form and assert required fields and error messages (TC-001, TC-002).
+-	Simulate filter controls on dashboard and assert filtered output (TC-010).
+-	Test admin status update function updates storage and returns expected data (TC-040).
+-	Snapshot tests for major components (home, dashboard, admin) to catch UI regressions.
 Example Jest test skeleton:
+
 // sample: PickupForm.test.js
 import { render, screen, fireEvent } from '@testing-library/react';
 import PickupForm from '../PickupForm';
@@ -230,50 +231,52 @@ test('shows error when full name is empty', () => {
   fireEvent.click(screen.getByText(/Submit Request/i));
   expect(screen.getByText(/required/i)).toBeInTheDocument();
 });
+
 Run with: npm test
 
 ---
 
 ## Defect Reporting & Management
-Tool: Use GitHub Issues and Jira. Each defect should include:
-•	Title (clear short summary)
-•	Description (steps to reproduce, expected vs actual)
-•	Environment (browser, OS, app version)
-•	Severity (P0/P1/P2)
-•	Attachments (screenshots, console logs)
-•	Assignee & label (bug/UX/accessibility)
+Tool: Use Jira. Each defect should include:
+-	Title (clear short summary)
+-	Description (steps to reproduce, expected vs actual)
+-	Environment (browser, OS, app version)
+-	Severity (High/Medium/Low)
+-	Attachments (screenshots, console logs)
+-	Assignee & label (bug/UX/accessibility)
 Severity Definitions:
-•	P0 (Critical): Core functionality broken (submit request fails, filter returns wrong dataset). Blocker for release.
-•	P1 (High): Important features affected or major UX problems (missing alt text, persistence issues).
-•	P2 (Medium): Nice-to-have fixes or cosmetic issues (layout quirks).
-•	P3 (Low): Low impact, suggestions.
-________________________________________
+-	(Critical): Core functionality broken (submit request fails, filter returns wrong dataset). Blocker for release.
+-	(High): Important features affected or major UX problems (missing alt text, persistence issues).
+-	(Medium): Nice-to-have fixes or cosmetic issues (layout quirks).
+-	(Low): Low impact, suggestions.
 
 ---
 
 ## Test Metrics & Reporting
-Metrics to gather:
-•	Number of test cases executed / passed / failed
-•	Number of defects opened / closed (by severity)
-•	Test coverage reported by Jest (if configured)
-•	Accessibility score from Lighthouse
-Test Status Reporting:
-•	Daily standup summary (what tested, top issues)
-•	End-of-cycle test summary with pass rate, major defects, and recommendations
+## Metrics to gather:
+-	Number of test cases executed / passed / failed
+-	Number of defects opened / closed (by severity)
+-	Test coverage reported by Jest (if configured)
+-	Accessibility score from Lighthouse
+## Test Status Reporting:
+-	Daily standup summary (what tested, top issues)
+-	End-of-cycle test summary with pass rate, major defects, and recommendations
 
 ---
 
 ## Sign-off Criteria
 Project is ready for sign-off when:
-•	All P0 defects resolved and verified.
+•	All defects resolved and verified.
 •	90%+ of planned test cases executed.
 •	Test summary and defect list provided to stakeholders.
-Team Roles (3 teammates)
-Role	Responsibilities		Deliverables
-Test Manager	  Plan, coordinate, finalize  report		Updated Test Plan, daily status reports, final Test Summary.
-Risk Analyst	  Identify,log & monitor risks		Risk register, impact analysis, mitigation recommendations.
 
-Test Executor	    Run tests & report bugs		Test execution evidence (screenshots, logs), defect tickets, test case status updates.
+Team Roles 
+| Role |	Responsibilities	|	Deliverables |
+|-------|------------------|-----------------|
+
+| Test Manager	|  Plan, coordinate, finalize  report		|Updated Test Plan, daily status reports, final Test Summary.|
+| Risk Analyst	|  Identify,log & monitor risks	|	Risk register, impact analysis, mitigation recommendations.|
+| Test Executor	 |   Run tests & report bugs	|	Test execution evidence (screenshots, logs), defect tickets, test case status updates.|
 
 ---
 

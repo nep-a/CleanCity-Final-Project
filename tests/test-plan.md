@@ -1,5 +1,5 @@
 **Course:** Software Testing & Quality Assurance  
-**Module:** Group Project 
+**Module:** Group Project  
 **Project Type:** Final Project
 
 ## Test Plan
