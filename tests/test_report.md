@@ -266,11 +266,11 @@ Severity Definitions:
 
 ## Sign-off Criteria
 Project is ready for sign-off when:
-•	All defects resolved and verified.
-•	90%+ of planned test cases executed.
-•	Test summary and defect list provided to stakeholders.
+-	All defects resolved and verified.
+-	90%+ of planned test cases executed.
+-	Test summary and defect list provided to stakeholders.
 
-Team Roles 
+## Team Roles 
 | Role |	Responsibilities	|	Deliverables |
 |-------|------------------|-----------------|
 | Test Manager	|  Plan, coordinate, finalize  report		|Updated Test Plan, daily status reports, final Test Summary.| 
@@ -291,7 +291,7 @@ Team Roles
 ## Escalation Path:
 1.	Test Executor → Test Manager (for issues that block test progress)
 2.	Test Manager → Instructor / Stakeholder (for unresolved issues)
-Templates:
+## Templates:
 -	Completed: Executed test cases 
 -	In progress: Accessibility checks 
 -	Blocker: Unable to reproduce admin UI refresh bug on Chrome
