@@ -9,6 +9,7 @@
 The Clean City Project is a web-based sustainability platform enabling citizens to report waste, view cleanup events, and volunteer for environmental causes. The system includes a user interface, forms, event listings, and an admin dashboard.
 
 ---
+
 ## Purpose & Scope
 This document explains how we will test the CleanCity waste pickup scheduling system. Our goal is to make sure users can:
 -	Submit pickup requests
@@ -18,6 +19,9 @@ This document explains how we will test the CleanCity waste pickup scheduling sy
 -	View awareness information
 -	Admins can update request statuses
 - We’ll test the app manually and with automated React tests to confirm it works smoothly, looks right on multiple devices, and stores data properly.
+
+---
+
 ## Scope
 ## (In-scope):
 -	Home Page: pickup request form and validation 
@@ -28,12 +32,20 @@ This document explains how we will test the CleanCity waste pickup scheduling sy
 -	Admin panel: update statuses, UI state, persistence via localStorage 
 -	Responsive layout on desktop and mobile viewports 
 -	Automated unit/integration tests with React Testing Library 
+
+---
 ## Out-of-scope:
 -	Backend API tests  
 -	Advanced Security penetration testing 
--	Performance load testing    
+-	Performance load testing
+
+---
+
 ## Test Objectives
 We need to verify all functional requirements (submit requests, view requests, filter, update status). Validate form inputs and error messages. Confirm data persistence. Check accessibility Ensure UI responds on different screen sizes (mobile, tablet, desktop). Execute automated test suite and verify passing tests for key flows.
+
+---
+
 ## Test Approach & Strategy
 ## Strategies used:
 -	Manual Exploratory & Scripted Testing: Execute explicit test cases for forms, filtering, admin actions, and feedback.
@@ -41,32 +53,46 @@ We need to verify all functional requirements (submit requests, view requests, f
 -	Accessibility Checks: Manual screen reader checks, keyboard navigation, and Lighthouse a11y audits.
 -	Automated Tests: Use React Testing Library to validate core component logic and form validation behavior.
 -	Data Persistence Checks: Use browser devtools to inspect localStorage after actions.
+
+---
+
 ## Test Types:
 -	Functional tests (positive/negative)
 - Usability & Accessibility tests
 - Responsive tests
 -	Regression tests after bug fixes
 -	Automated unit/integration tests 
+
+---
+
 ## Environments:
 -	Development: localhost:3000 (React dev server)
 -	Browser targets: Chrome, Firefox, Edge, and Safari; ensuring desktop and mobile simulation
 -	Node.js
+
+---
+
 ## Entry & Exit Criteria
-Entry Criteria:
+## Entry Criteria:
 •	Application starts successfully.
 •	Test data seeded / sample requests present (REQ001–REQ005).
 •	Test environment (browsers) available.
 •	Test plan approved.
-Exit Criteria:
+## Exit Criteria:
 •	All P0 and P1 test cases executed and passed OR have approved mitigations / accepted risks.
 •	All P0 defects fixed and re-tested.
 •	Test summary report completed and signed off by Test Manager.
+
+---
+
 ## Test Deliverables
 -	Test Plan 
 -	Test Cases & Execution Results 
 -	Bug report 
 -	Test Summary Report
 -	Automated test reports
+
+---
 
 ## Test Schedule
 -	Day 1: Setup + smoke tests (install/run)
@@ -75,12 +101,17 @@ Exit Criteria:
 -	Day 4: Admin panel & persistence testing; exploratory
 -	Day 5: Accessibility & responsive testing; automated test runs
 -	Day 6: Regression re-test & summary report
+
+---
+
 ## Risk & Mitigation
 Risk	Impact	Likelihood	Mitigation
 Form validation failures (intentional bug)	High (affects core functionality)	High	Log as P0; create ticket and re-test after fix.
 localStorage not updating UI	Medium	Medium	Reproduce steps, capture devtools logs, create issue; consider forced re-render as temp fix.
 Missing alt-text in Awareness images	Medium (accessibility)	High	Add alt attributes; add to acceptance criteria.
 Cross-browser layout differences	Low–Medium	Medium	Test in target browsers; adjust CSS breakpoints.
+
+---
 
 ## Test Data
 Sample Requests (seeded):
@@ -92,6 +123,9 @@ Sample Requests (seeded):
 User accounts (demo):
 •	Regular user: user@cleancity.com / password123
 •	Admin user: admin@cleancity.com / admin123
+
+---
+
 ## Traceability Matrix (Features → Test Cases)
 Feature	Test Case IDs
 Submit pickup request	TC-001, TC-002, TC-003
@@ -102,6 +136,8 @@ Admin status update	TC-040, TC-041
 LocalStorage persistence	TC-050
 Accessibility (alt text, labels)	TC-060, TC-061
 Boundary test (long inputs)	TC-070
+
+---
 
 ## Test Cases (Key / Required)
 Below are sample test cases. Status column is to be filled after execution.
@@ -175,6 +211,9 @@ TC-070 — Boundary testing: very long input
 2.	Submit the form.
 •	Expected Result: Application handles gracefully — truncated or rejected with a validation message; layout not broken. If layout breaks, record as bug.
 •	Priority: P2
+
+---
+
 ## Automated Tests
 Recommended automated tests to implement with React Testing Library:
 •	Render pickup form and assert required fields and error messages (TC-001, TC-002).
@@ -192,6 +231,9 @@ test('shows error when full name is empty', () => {
   expect(screen.getByText(/required/i)).toBeInTheDocument();
 });
 Run with: npm test
+
+---
+
 ## Defect Reporting & Management
 Tool: Use GitHub Issues and Jira. Each defect should include:
 •	Title (clear short summary)
@@ -206,6 +248,9 @@ Severity Definitions:
 •	P2 (Medium): Nice-to-have fixes or cosmetic issues (layout quirks).
 •	P3 (Low): Low impact, suggestions.
 ________________________________________
+
+---
+
 ## Test Metrics & Reporting
 Metrics to gather:
 •	Number of test cases executed / passed / failed
@@ -215,6 +260,9 @@ Metrics to gather:
 Test Status Reporting:
 •	Daily standup summary (what tested, top issues)
 •	End-of-cycle test summary with pass rate, major defects, and recommendations
+
+---
+
 ## Sign-off Criteria
 Project is ready for sign-off when:
 •	All P0 defects resolved and verified.
@@ -226,12 +274,17 @@ Test Manager	  Plan, coordinate, finalize  report		Updated Test Plan, daily stat
 Risk Analyst	  Identify,log & monitor risks		Risk register, impact analysis, mitigation recommendations.
 
 Test Executor	    Run tests & report bugs		Test execution evidence (screenshots, logs), defect tickets, test case status updates.
+
+---
+
 ## Communication Plan
 ## Primary Channels:
 -	Jira / Google Meet / WhatsApp: real-time collaboration & quick questions 
 -	Issues: defect tracking and detailed bug reports.
 -	Email: official sign-offs / final report submission.
 -	Google Drive / Repo: share test artifacts (test case spreadsheets, screenshots).
+
+---
 
 ## Escalation Path:
 1.	Test Executor → Test Manager (for issues that block test progress)
@@ -243,6 +296,9 @@ Templates:
 -	Environment: Chrome 118 on Windows 10
 -	Attachments: screenshot.png
 -	Assignee: @member
+
+---
+
 ## Quick Checklist Before Execution
 • Confirm the project runs locally with npm start.
 • Verify seed data (REQ001–REQ005) present.
@@ -250,8 +306,8 @@ Templates:
 • Prepare test cases in a spreadsheet or Markdown for execution tracking.
 • Create Issues
 
-
 ---
+
 ## Test Approach
 - **Testing Type:** Manual Functional Testing  
 - **Environment:** Chrome v120 on Windows 10  
@@ -259,7 +315,6 @@ Templates:
 - **Focus Areas:** Form validation, navigation, authentication, and layout consistency
 
 ---
-
 
 ## Key Defects Summary
 - Event filtering not functional.
