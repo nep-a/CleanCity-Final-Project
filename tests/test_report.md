@@ -11,46 +11,46 @@ The Clean City Project is a web-based sustainability platform enabling citizens 
 ---
 ## Purpose & Scope
 This document explains how we will test the CleanCity waste pickup scheduling system. Our goal is to make sure users can:
-•	Submit pickup requests
-•	Register/log in
-•	Track recycling status
-•	Give feedback
-•	View awareness information
-•	Admins can update request statuses
-We’ll test the app manually and with automated React tests to confirm it works smoothly, looks right on multiple devices, and stores data properly.
+-	Submit pickup requests
+-	Register/log in
+-	Track recycling status
+-	Give feedback
+-	View awareness information
+-	Admins can update request statuses
+- We’ll test the app manually and with automated React tests to confirm it works smoothly, looks right on multiple devices, and stores data properly.
 ## Scope
 ## (In-scope):
-•	Home Page: pickup request form and validation
-•	User Registration & Login
-•	Dashboard: listing, filtering, and status display
-•	Feedback page submission, and request ID validation 
-•	Awareness page: content and accessibility checks
-•	Admin panel: update statuses, UI state, persistence via localStorage
-•	Responsive layout on desktop and mobile viewports
-•	Automated unit/integration tests with React Testing Library
+-	Home Page: pickup request form and validation 
+-	User Registration & Login 
+-	Dashboard: listing, filtering, and status display  
+-	Feedback page submission, and request ID validation  
+-	Awareness page: content and accessibility checks 
+-	Admin panel: update statuses, UI state, persistence via localStorage 
+-	Responsive layout on desktop and mobile viewports 
+-	Automated unit/integration tests with React Testing Library 
 ## Out-of-scope:
-•	Backend API tests 
-•	Advanced Security penetration testing
-•	Performance load testing 
+-	Backend API tests  
+-	Advanced Security penetration testing 
+-	Performance load testing    
 ## Test Objectives
 We need to verify all functional requirements (submit requests, view requests, filter, update status). Validate form inputs and error messages. Confirm data persistence. Check accessibility Ensure UI responds on different screen sizes (mobile, tablet, desktop). Execute automated test suite and verify passing tests for key flows.
 ## Test Approach & Strategy
-Strategies used:
-•	Manual Exploratory & Scripted Testing: Execute explicit test cases for forms, filtering, admin actions, and feedback.
-•	Boundary Testing: Inputs with very long strings, invalid dates, missing required fields.
-•	Accessibility Checks: Manual screen reader checks, keyboard navigation, and Lighthouse a11y audits.
-•	Automated Tests: Use React Testing Library to validate core component logic and form validation behavior.
-•	Data Persistence Checks: Use browser devtools to inspect localStorage after actions.
-Test Types:
-•	Functional tests (positive/negative)
-•	Usability & Accessibility tests
-•	Responsive tests
-•	Regression tests after bug fixes
-•	Automated unit/integration tests 
-Environments:
-•	Development: localhost:3000 (React dev server)
-•	Browser targets: Chrome, Firefox, Edge, and Safari; ensuring desktop and mobile simulation
-•	Node.js
+## Strategies used:
+-	Manual Exploratory & Scripted Testing: Execute explicit test cases for forms, filtering, admin actions, and feedback.
+-	Boundary Testing: Inputs with very long strings, invalid dates, missing required fields.
+-	Accessibility Checks: Manual screen reader checks, keyboard navigation, and Lighthouse a11y audits.
+-	Automated Tests: Use React Testing Library to validate core component logic and form validation behavior.
+-	Data Persistence Checks: Use browser devtools to inspect localStorage after actions.
+## Test Types:
+-	Functional tests (positive/negative)
+- Usability & Accessibility tests
+- Responsive tests
+-	Regression tests after bug fixes
+-	Automated unit/integration tests 
+## Environments:
+-	Development: localhost:3000 (React dev server)
+-	Browser targets: Chrome, Firefox, Edge, and Safari; ensuring desktop and mobile simulation
+-	Node.js
 ## Entry & Exit Criteria
 Entry Criteria:
 •	Application starts successfully.
@@ -62,19 +62,19 @@ Exit Criteria:
 •	All P0 defects fixed and re-tested.
 •	Test summary report completed and signed off by Test Manager.
 ## Test Deliverables
-•	Test Plan 
-•	Test Cases & Execution Results 
-•	GitHub Issues 
-•	Test Summary Report
-•	Automated test reports
-•	Accessibility audit report (Lighthouse)
+-	Test Plan 
+-	Test Cases & Execution Results 
+-	Bug report 
+-	Test Summary Report
+-	Automated test reports
+
 ## Test Schedule
-•	Day 1: Setup + smoke tests (install/run)
-•	Day 2: Manual functional tests — Home & forms
-•	Day 3: Manual tests — Dashboard, filtering, feedback
-•	Day 4: Admin panel & persistence testing; exploratory
-•	Day 5: Accessibility & responsive testing; automated test runs
-•	Day 6: Regression re-test & summary report
+-	Day 1: Setup + smoke tests (install/run)
+-	Day 2: Manual functional tests — Home & forms
+-	Day 3: Manual tests — Dashboard, filtering, feedback
+-	Day 4: Admin panel & persistence testing; exploratory
+-	Day 5: Accessibility & responsive testing; automated test runs
+-	Day 6: Regression re-test & summary report
 ## Risk & Mitigation
 Risk	Impact	Likelihood	Mitigation
 Form validation failures (intentional bug)	High (affects core functionality)	High	Log as P0; create ticket and re-test after fix.
@@ -227,22 +227,22 @@ Risk Analyst	  Identify,log & monitor risks		Risk register, impact analysis, mit
 
 Test Executor	    Run tests & report bugs		Test execution evidence (screenshots, logs), defect tickets, test case status updates.
 ## Communication Plan
-Primary Channels:
-•	Jira / Google Meet / WhatsApp: real-time collaboration & quick questions 
-•	GitHub Issues: defect tracking and detailed bug reports.
-•	Email: official sign-offs / final report submission.
-•	Google Drive / Repo: share test artifacts (test case spreadsheets, screenshots).
+## Primary Channels:
+-	Jira / Google Meet / WhatsApp: real-time collaboration & quick questions 
+-	Issues: defect tracking and detailed bug reports.
+-	Email: official sign-offs / final report submission.
+-	Google Drive / Repo: share test artifacts (test case spreadsheets, screenshots).
 
 ## Escalation Path:
 1.	Test Executor → Test Manager (for issues that block test progress)
 2.	Test Manager → Instructor / Stakeholder (for unresolved issues)
 Templates:
-o	Completed: Executed test cases 
-o	In progress: Accessibility checks 
-o	Blocker: Unable to reproduce admin UI refresh bug on Chrome
-o	Environment: Chrome 118 on Windows 10
-o	Attachments: screenshot.png
-o	Assignee: @member
+-	Completed: Executed test cases 
+-	In progress: Accessibility checks 
+-	Blocker: Unable to reproduce admin UI refresh bug on Chrome
+-	Environment: Chrome 118 on Windows 10
+-	Attachments: screenshot.png
+-	Assignee: @member
 ## Quick Checklist Before Execution
 • Confirm the project runs locally with npm start.
 • Verify seed data (REQ001–REQ005) present.
