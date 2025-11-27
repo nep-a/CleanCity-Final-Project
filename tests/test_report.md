@@ -273,10 +273,9 @@ Project is ready for sign-off when:
 Team Roles 
 | Role |	Responsibilities	|	Deliverables |
 |-------|------------------|-----------------|
-
-| Test Manager	|  Plan, coordinate, finalize  report		|Updated Test Plan, daily status reports, final Test Summary.|
-| Risk Analyst	|  Identify,log & monitor risks	|	Risk register, impact analysis, mitigation recommendations.|
-| Test Executor	 |   Run tests & report bugs	|	Test execution evidence (screenshots, logs), defect tickets, test case status updates.|
+| Test Manager	|  Plan, coordinate, finalize  report		|Updated Test Plan, daily status reports, final Test Summary.| 
+| Risk Analyst	|  Identify,log & monitor risks	|	Risk register, impact analysis, mitigation recommendations.| 
+| Test Executor	 |   Run tests & report bugs	|	Test execution evidence (screenshots, logs), defect tickets, test case status updates.| 
 
 ---
 
